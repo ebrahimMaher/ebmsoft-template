@@ -1,13 +1,7 @@
 module.exports = {
     transpileDependencies: ["vuetify"],
-    configureWebpack: {
-        rules: [
-            {
-                test: /particles\.js/,
-                use: 'exports-loader?particlesJS=window.particlesJS,pJSDom=window.pJSDom'
-            }
-        ]
-    },
+
+
     pwa: {
         name: 'EBMSoft',
         themeColor: '#02173A',
@@ -24,5 +18,14 @@ module.exports = {
             appleTouchIcon: 'img/icons/favicon-128x128.png',
             msTileImage: 'img/icons/favicon-128x128.png'
         }
+    },
+
+    pluginOptions: {
+      i18n: {
+        locale: 'en',
+        fallbackLocale: 'en',
+        localeDir: 'locales',
+        enableInSFC: true
+      }
     }
 };

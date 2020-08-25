@@ -1,20 +1,60 @@
+<i18n>
+{
+    "ar": {
+
+        "sections": {
+            "1": {
+                "title": "حلول تقنية للأعمال التجارية اﻹلكترونية",
+                "subtitle": "نعمل على برمجة وتطوير خدمات ومنصات توفر حلولاً للأعمال التجارية اﻹلكترونية في الشرق اﻷوسط والوطن العربي"
+            },
+            "actions": {
+                "contact": "تواصل معنا",
+                "products": "منتجاتنا"
+            }
+        }
+    },
+    "en": {
+        "sections": {
+            "1": {
+                "title": "E-Business Software Solutions",
+                "subtitle": "We are providing software solutions, products and platforms to e-commerce, and other e-business industries in the middle east."
+            },
+            "actions": {
+                "contact": "Contact Us",
+                "products": "Our Products"
+            }
+        }
+    }
+}
+</i18n>
 <template>
-    <div class="page">
+    <div class="page page-sections">
         <section class="header-section dark-gradient fullpage-section">
             <div id="particles-js"></div>
             <v-container class="fill-height pt-12">
-                <h1>
-                    We Are <span class="secondary--text font-weight-medium">EBMSOFT,</span>
+                <v-scroll-y-transition appear >
+                <h1 class="strong-text--text">
+                    {{$t('sections.1.title')}}
+                    <!-- <span class="secondary--text font-weight-medium">EBMSOFT</span> -->
                 </h1>
-                <h2 class="mt-3">
-                    <div>We are providing software solutions and products to e-commerce, financial technology and e-business in the middle east.</div>
+                </v-scroll-y-transition>
+                <v-scroll-x-transition appear>
+                <h2 class="text--text mt-3">
+                    <div>{{$t('sections.1.subtitle')}}</div>
                     <!-- <div>Information Technology & Electronic Business Company</div> -->
                 </h2>
+                </v-scroll-x-transition>
+                <v-scroll-y-reverse-transition appear >
                 <div class="actions">
-                    <v-btn color="white" tile large depressed class="me-6">Our Products</v-btn>
-                    <v-btn color="secondary" tile large outlined>Contact Us</v-btn>
+                    <v-btn color="strong-text" tile large depressed outlined class="me-6">{{$t('sections.actions.products')}}</v-btn>
+                    <v-btn color="secondary" tile large outlined>{{$t('sections.actions.contact')}}</v-btn>
                 </div>
+                </v-scroll-y-reverse-transition>
             </v-container>
+
+            <div class="section-scroll-icon">
+                <scroll-icon @click="scrollToSection(2)"/>
+            </div>
         </section>
         <section class="header-section while fullpage-section">
             test
@@ -22,16 +62,33 @@
         <section class="header-section primary fullpage-section">
             test
         </section>
+
+        <scroll-to-top />
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import 'particles.js/particles';
+import ScrollToTop from '@/components/custom/scroll-to-top'
+import ScrollIcon from '@/components/custom/scroll-icon'
 export default {
     name: "Home",
     components: {
-
+        ScrollToTop,
+        ScrollIcon
+    },
+    methods: {
+        scrollToSection(n){
+            let i = n-1,
+                element = document.querySelectorAll('.page-sections section')[i];
+            if (element){
+                this.scrollToElement(element, 1000);
+            }
+        },
+        scrollToElement(el, duration=700){
+            this.$vuetify.goTo(el, {duration: duration, container: document.body});
+        }
     },
 
     mounted(){
@@ -76,6 +133,16 @@ export default {
         }
         .actions{
             margin-top: 4rem;
+            .v-btn{
+                min-width: 130px;
+                min-height: 45px;
+            }
+        }
+        .section-scroll-icon{
+            position: absolute;
+            bottom: 8%;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 </style>

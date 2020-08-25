@@ -10,6 +10,9 @@ export default new Vuetify({
         primary: "#02173A",
         secondary: "#2789dd",
         dark: "#050A19",
+        "strong-text": "#ddeeff",
+        text: "#a8bdd2",
+
         accent: "#82B1FF",
         error: "#FF5252",
         info: "#2196F3",

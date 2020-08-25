@@ -1,25 +1,51 @@
+<i18n>
+{
+    "ar": {
+        "home": "الرئيسية",
+        "products": "منتجاتنا",
+        "team": "فريق العمل",
+        "contact": "تواصل معنا"
+    },
+    "en": {
+        "home": "Home",
+        "products": "Products",
+        "team": "Our Team",
+        "contact": "Contact Us"
+    }
+}
+</i18n>
 <template>
-    <v-app-bar :height="scrolled ? 95 : 130" class="dark-gradient navbar" :class="{'blank': !scrolled}" flat fixed :color="scrolled ? 'dark' : 'dark'" dark>
+    <v-app-bar light :height="scrolled ? 95 : 130" class="dark-gradient navbar" :class="{'blank': !scrolled}" flat fixed :color="scrolled ? 'dark' : 'dark'" dark>
         <v-container class="d-flex align-center">
             <div>
                 <!-- logo -->
                 <v-img :src="'/img/logo-white.png'" width="150" height="auto" contain />
             </div>
             <v-spacer />
-            <div class="d-flex align-center">
-                <v-btn large tile text class="ms-2">Home</v-btn>
-                <v-btn large tile text class="ms-2">Products</v-btn>
-                <v-btn color="secondary lighten-1" large tile text class="ms-2">Team</v-btn>
-                <v-btn large tile depressed outlined class="ms-4">Contact Us</v-btn>
-            </div>
+            <v-slide-x-reverse-transition appear>
+                <div class="d-flex">
+                    <div class="d-flex align-center">
+                        <v-btn color="secondary lighten-1" large tile text class="ms-2">{{$t('home')}}</v-btn>
+                        <v-btn large tile text class="ms-2">{{$t('products')}}</v-btn>
+                        <v-btn large tile text class="ms-2">{{$t('contact')}}</v-btn>
+                        <v-btn large tile text depressed class="ms-4">{{$t('contact')}}</v-btn> <!-- outlined -->
+                    </div>
+
+                    <div class="d-flex align-center ms-3">
+                        <locale-button />
+                    </div>
+
+                </div>
+            </v-slide-x-reverse-transition>
         </v-container>
     </v-app-bar>
 </template>
 
 <script>
-
+import LocaleButton from '../custom/locale-button'
 export default {
     name: 'navbar',
+    components: {LocaleButton},
     data(){
         return {
             scrolled: false,

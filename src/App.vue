@@ -39,10 +39,15 @@ export default {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
     }
-    @import url(https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Poppins:wght@200;300;400;500;600&display=swap);
+    @import url(https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&family=Poppins:wght@200;300;400;500;600&display=swap);
     .v-application, body, html, .v-main{
         font-family: 'poppins', 'cairo'!important;
         font-size: 17px!important;
+        &.v-application--is-rtl{
+            div, h1, h2, h3, h4, p{
+                letter-spacing: -.5px!important;
+            }
+        }   
     }
     #app, #fullpage, .page, .fullpage-section, .v-application, body, html{
         height: 100vh;
@@ -59,11 +64,19 @@ export default {
 
     
     /* buttons */
-    .v-btn{
-        letter-spacing: 1.1px;
-        &.v-size--large{
-            &:not(.v-btn--round){
-                padding: 0 22px;
+    .v-application{
+        .v-btn{
+            letter-spacing: 1.1px;
+            &.v-size--large{
+                &:not(.v-btn--round){
+                    padding: 0 20px;
+                }
+            }
+        }
+        &.v-application--is-rtl{
+            
+            .v-btn{
+                letter-spacing: 0!important;
             }
         }
     }
