@@ -1,56 +1,70 @@
 <template>
-  <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-app>
+        <navbar />
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-main>
-      <HelloWorld />
-    </v-main>
-  </v-app>
+        <v-main>
+            <router-view />
+        </v-main>
+    </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Navbar from './components/main/navbar'
 
 export default {
-  name: "App",
+    name: "App",
 
-  components: {
-    HelloWorld
-  },
+    components: {
+        Navbar
+    },
 
-  data: () => ({
-    //
-  })
+    data: () => ({
+        //
+    })
 };
 </script>
+
+<style lang="scss">
+    .dark-gradient{
+        background-color: #050a19!important;
+        background: linear-gradient(125deg, rgba(5,10,25,1) 45%, rgb(3, 16, 53) 100%)!important;
+    }
+    html, body{
+        overflow: auto;
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+        display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    @import url(https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Poppins:wght@200;300;400;500;600&display=swap);
+    .v-application, body, html, .v-main{
+        font-family: 'poppins', 'cairo'!important;
+        font-size: 17px!important;
+    }
+    #app, #fullpage, .page, .fullpage-section, .v-application, body, html{
+        height: 100vh;
+    }
+    .container {
+        @media(min-width: 1264px){
+            max-width: 1185px;
+        }
+
+        @media(min-width: 1904px){
+            max-width: 1290px;
+        }
+    }
+
+    
+    /* buttons */
+    .v-btn{
+        letter-spacing: 1.1px;
+        &.v-size--large{
+            &:not(.v-btn--round){
+                padding: 0 22px;
+            }
+        }
+    }
+</style>
