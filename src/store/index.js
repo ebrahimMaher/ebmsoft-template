@@ -7,6 +7,7 @@ export default new Vuex.Store({
     state: {
         loading: true,
         lightNavbar: false,
+        activeSection: 'home',
     },
     mutations: {
         SET_LOADING(state, loading){
@@ -14,6 +15,9 @@ export default new Vuex.Store({
         },
         SET_LIGHT_NAVBAR(state, light){
             state.lightNavbar = !!light;
+        },
+        SET_ACTIVE_SECTION(state, section){
+            state.activeSection = section;
         },
     },
     actions: {},

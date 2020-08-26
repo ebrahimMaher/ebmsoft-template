@@ -41,7 +41,7 @@
 </i18n>
 <template>
     <div class="page page-sections">
-        <section id="headerSection" class="header-section dark-gradient fullpage-section">
+        <section id="headerSection" data-section="home" class="header-section dark-gradient fullpage-section">
             <animated-background />
             <v-container v-if="!loading" class="fill-height pt-12">
                 <v-slide-y-transition appear >
@@ -70,7 +70,7 @@
 
         </cols-section>
 
-        <e-section id="productsSection" background="light" headline="مشاريعنا" subtitle="المنصات والخدمات اﻹلكترونية التابعة لشركتنا والتي نعمل على تطويرها وإدراتها" light>
+        <e-section id="productsSection" data-section="products" background="light" headline="مشاريعنا" subtitle="المنصات والخدمات اﻹلكترونية التابعة لشركتنا والتي نعمل على تطويرها وإدراتها" light>
             <v-row class="flex-wrap justify-center">
                 <v-col v-for="(project, i) in projects" :key="i" cols="4">
                     <v-card v-ripple="false" class="card-shadow fill-height pa-3" :href="project.href ? project.href : ''" :target="project.href ? '_blank' : ''">
@@ -82,11 +82,11 @@
             </v-row>
         </e-section>
 
-        <e-section id="timelineSection" divider headline="الشريط الزمني لتاريخ الشركة" subtitle="شريط زمني يضم الأحداث والتواريخ الهامة في تاريخ شركة EBMSoft" light>
+        <e-section id="timelineSection" data-section="timeline" divider headline="الشريط الزمني لتاريخ الشركة" subtitle="شريط زمني يضم الأحداث والتواريخ الهامة في تاريخ شركة EBMSoft" light>
             <timeline :data="timeline" />
         </e-section>
 
-        <e-section id="contactSection" headline="تواصل معنا" subtitle="اترك لنا رسالة وسوف نقوم بالرد عليك بأسرع وقت ممكن" light>
+        <e-section id="contactSection" data-section="contact" headline="تواصل معنا" subtitle="اترك لنا رسالة وسوف نقوم بالرد عليك بأسرع وقت ممكن" light>
             <v-row class="justify-center px-lg-12">
                 <v-col cols="6" class="ps-lg-12">
                     <contact-form />
@@ -240,6 +240,10 @@ export default {
                     offsetBottom = offsetTop + section.offsetHeight;
 
                 if (scrollTop >= offsetTop && scrollTop < offsetBottom){
+                    let sectionName = section.getAttribute('data-section');
+                    if(sectionName){
+                        this.$store.commit('SET_ACTIVE_SECTION', sectionName)
+                    }
                     // section is visible...
                     if (section.getAttribute('data-theme') === 'light'){
                         

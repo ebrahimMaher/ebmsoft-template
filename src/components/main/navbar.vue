@@ -19,7 +19,7 @@
             <v-slide-x-reverse-transition appear>
                 <div class="d-flex">
                     <div class="d-flex align-center">
-                        <v-btn v-for="link in links" :key="link.name" large tile text class="ms-2" @click="navigateToLink(link.ref)">{{$t(`links.${link.name}`)}}</v-btn>
+                        <v-btn :color="activeSection === link.name ? 'secondary' : undefined" :outlined="activeSection === link.name" v-for="link in links" :key="link.name" large tile :text="activeSection !== link.name" class="ms-2" @click="navigateToLink(link.ref)">{{$t(`links.${link.name}`)}}</v-btn>
                     </div>
 
                     <div class="d-flex align-center ms-8">
@@ -61,6 +61,9 @@ export default {
     computed: {
         light(){
             return this.lightTheme && this.scrolled
+        },
+        activeSection(){
+            return this.$store.state.activeSection;
         },
         ...GlobalComputed
     },

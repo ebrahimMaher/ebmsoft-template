@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="e-section" :class="{'py-6': phoneOnly, 'dark-gradient': !light, [background]: background}" :data-theme="light ? 'light' : 'dark'">
+        <section :data-section="dataSection" class="e-section" :class="{'py-6': phoneOnly, 'dark-gradient': !light, [background]: background}" :data-theme="light ? 'light' : 'dark'">
             <v-container>
                 <div class="d-flex justify-center">
                     <div v-if="headline" class="section-title">
@@ -40,7 +40,7 @@ export default {
         background: {},
         light: {type: Boolean, default: false},
         divider: {type: Boolean, default: false},
-        
+        dataSection: {},
     },
     data(){
         return {
