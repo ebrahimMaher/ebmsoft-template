@@ -1,3 +1,8 @@
 {
-  "message": "hello i18n22 !!"
+    "links": {
+        "home": "الرئيسية",
+        "products": "مشاريعنا",
+        "timeline": "الشريط الزمني",
+        "contact": "تواصل معنا"
+    }
 }

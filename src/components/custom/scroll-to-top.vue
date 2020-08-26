@@ -1,7 +1,7 @@
 <template>
     <div class="scroll-to-top">
         <v-slide-y-reverse-transition appear>
-            <v-btn fab color="secondary" outlined large v-show="show" @click.stop="scrollToTop">
+            <v-btn fab color="secondary" depressed large v-show="show" @click.stop="scroll">
                 <v-icon size="24">mdi-arrow-up</v-icon>
             </v-btn>
         </v-slide-y-reverse-transition>
@@ -16,10 +16,8 @@ export default {
         }
     },
     methods: {
-        scrollToTop(){
-            let scrollTo = 0; // scrollTop = top-offset-of-bottom-of-page = full height - screen height (visible area) 
-            const el = document.body;
-            this.$vuetify.goTo(scrollTo, {duration: 500, container: el});
+        scroll(){
+            this.$vuetify.goTo(0, {duration: 1000, container: document.body, easing: 'easeOutQuint'});
         },
         toggleShow(){
             const el = document.body,

@@ -101,7 +101,11 @@ export default {
 
             let browserLocale = this.getBrowserLocale(),
                 locale = browserLocale ? browserLocale : process.env.VUE_APP_I18N_LOCALE;
-            this.setSavedLocale(locale);
+            if (this.current !== locale){
+                this.changeLocale(locale);
+            }else{
+                this.setSavedLocale(locale);
+            }
         }
     }
 }

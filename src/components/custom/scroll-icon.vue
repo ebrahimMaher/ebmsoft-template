@@ -25,7 +25,6 @@ export default {
   margin-top: -35px;
   box-shadow: inset 0 0 0 1px #fff;
   border-radius: 25px;
-
   opacity: 0.85;
   cursor: pointer;
   &:hover{
