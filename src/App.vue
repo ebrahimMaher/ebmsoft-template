@@ -90,6 +90,26 @@ export default {
     #app, #fullpage, .page, .fullpage-section, .v-application, body, html{
         height: 100vh;
     }
+    .v-card{
+        &.card-shadow{
+            box-shadow: 0 1px 5px 0 rgba(0,0,0, .1)!important;
+            transition: 0.15s ease-in-out all;
+            
+            &:hover{
+                box-shadow: 0 4px 10px 1px rgba(0,0,0, .1)!important;
+                transform: translateY(-5px);
+            }
+            &.v-card--link{
+                &:before{
+                    opacity: 0!important;
+                }
+                &:active{
+                    transform: translateY(1px);
+                    box-shadow: 0 2px 3px 1px rgba(0,0,0, .1)!important;
+                }
+            }
+        }
+    }
     .container {
         &:not(.container--fluid){
             @media(min-width: 1264px){

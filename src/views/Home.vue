@@ -71,7 +71,15 @@
         </cols-section>
 
         <e-section id="productsSection" background="light" headline="مشاريعنا" subtitle="المنصات والخدمات اﻹلكترونية التابعة لشركتنا والتي نعمل على تطويرها وإدراتها" light>
-            
+            <v-row class="flex-wrap justify-center">
+                <v-col v-for="(project, i) in projects" :key="i" cols="4">
+                    <v-card v-ripple="false" class="card-shadow fill-height pa-3" :href="project.href ? project.href : ''" :target="project.href ? '_blank' : ''">
+                        <v-img :src="project.image" cover height="300" />
+                        <v-card-title class="mb-1">{{project.title}}</v-card-title>
+                        <v-card-subtitle>{{project.subtitle}}</v-card-subtitle>
+                    </v-card>
+                </v-col>
+            </v-row>
         </e-section>
 
         <e-section id="timelineSection" divider headline="الشريط الزمني لتاريخ الشركة" subtitle="شريط زمني يضم الأحداث والتواريخ الهامة في تاريخ شركة EBMSoft" light>
@@ -157,6 +165,24 @@ export default {
                 {name: 'email', icon: 'mdi-email', value: 'info@ebmsoft.net', color: 'primary'},
                 {name: 'facebook', icon: 'mdi-facebook', value: '@EBMSoft.net', color: 'blue darken-1', href: 'https://facebook.com/ebmsoft.net'},
                 {name: 'website', icon: 'mdi-web', value: 'www.ebmsoft.net', color: 'grey', href: 'https://ebmsoft.net'},
+            ],
+            projects: [
+                {
+                    image: 'https://www.pricecheck.co.za/blog/wp-content/uploads/2017/07/WhatsApp_Logo_5.png',
+                    title: "Whatsapp Platform",
+                    subtitle: "Whatsapp is chating and social media platform",
+                    href: "https://web.whatsapp.com"
+                },
+                {
+                    image: 'https://www.pricecheck.co.za/blog/wp-content/uploads/2017/07/WhatsApp_Logo_5.png',
+                    title: "Whatsapp Platform",
+                    subtitle: "Whatsapp is chating and social media platform"
+                },
+                {
+                    image: 'https://www.pricecheck.co.za/blog/wp-content/uploads/2017/07/WhatsApp_Logo_5.png',
+                    title: "Whatsapp Platform",
+                    subtitle: "Whatsapp is chating and social media platform, Whatsapp is chating and social media platform, Whatsapp is chating and social media platform"
+                },
             ],
             timeline: [
                 {date: 2019},
