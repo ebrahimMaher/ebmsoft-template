@@ -1,5 +1,10 @@
 # ebmsoft
 
+## Clone the repo
+```
+git clone https://github.com/ebrahimMaher/ebmsoft-template
+```
+
 ## Project setup
 ```
 npm install

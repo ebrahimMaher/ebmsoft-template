@@ -93,9 +93,6 @@ export default {
             min-height: 350px;
             padding: 1.5rem 0!important;
             
-            .headline{
-                font-size: 1.9rem!important;
-            }
             .subtitle{
                 font-size: 15px!important;
             }

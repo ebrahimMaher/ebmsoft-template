@@ -94,6 +94,11 @@ export default {
         h1.headline{
             font-size: 2.2rem!important;
             line-height: 3.3rem!important;
+
+            @media(max-width: 960px){
+                font-size: 1.9rem!important;
+                line-height: 2.5rem!important;
+            }
         }
     }
     #fullpage, .fullpage-section{

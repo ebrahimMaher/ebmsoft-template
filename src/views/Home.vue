@@ -187,7 +187,7 @@
                     </p>
                     <div class="actions">
                         <v-btn @click="navigateToLink('#industriesSection')" tile large depressed color="primary">{{$t('sections.industries.title')}}</v-btn>
-                        <v-btn @click="navigateToLink('#timelineSection')" tile large depressed color="primary" outlined class="ms-4">{{$t('sections.timeline.title')}}</v-btn>
+                        <v-btn @click="navigateToLink('#timelineSection')" tile large depressed color="primary" outlined class="ms-lg-4 mt-3">{{$t('sections.timeline.title')}}</v-btn>
                     </div>
                 </v-col>
             </v-row>
@@ -459,7 +459,7 @@ export default {
 
             @media(max-width: 960px){
                 text-align: center;
-                font-size: 1.8rem;
+                font-size: 1.7rem;
                 line-height: 2.4rem;
                 font-weight: 400;
             }
