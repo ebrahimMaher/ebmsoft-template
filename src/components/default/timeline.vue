@@ -1,13 +1,17 @@
 <template>
-    <v-timeline class="e-timeline">
+    <v-timeline :align-top="phoneOnly" :dense="phoneOnly" class="e-timeline" :class="{'phone': phoneOnly}">
         <v-timeline-item v-for="(item, i) in data" :key="i" :color="color" small>
-            <template v-slot:opposite>
+            <template v-if="pcOnly" v-slot:opposite>
                 <span :class="`headline font-weight-bold ${color}--text`" v-text="item.date"></span>
             </template>
-            <div class="py-4">
-                <h2 :class="`headline font-weight-light mb-4 ${color}--text`">Lorem ipsum</h2>
-                <div>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</div>
-            </div>
+            <v-card flat class="py-4">
+                <div v-if="phoneOnly" class="details-text grey--text">{{item.date}}</div>
+                <h2 :class="`headline font-weight-light mb-4 ${color}--text`">{{item.title ? item.title : 'Lorem ipsum'}}</h2>
+                <div>
+                    <span v-if="item.content">{{item.content}}</span>
+                    <span v-else>Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an salutandi sententiae.</span>
+                </div>
+            </v-card>
         </v-timeline-item>
     </v-timeline>
 </template>
@@ -39,8 +43,9 @@ export default {
 
 <style lang="scss">
     .e-timeline{
-        .v-timeline-item__body{
+        .v-timeline-item__body .v-card{
             background: rgba(#919191, 0.05)!important;
+            box-shadow: none!important;
             transition: all 0.2s ease;
             padding: 5px 25px;
 
@@ -65,6 +70,39 @@ export default {
                 margin: auto!important;
                 width: 100%;
                 height: 100%;
+            }
+        }
+        &.phone{
+            padding: 0!important;
+            .v-timeline-item__divider{
+                min-width: 30px;
+            }
+            &.v-timeline--dense .v-timeline-item__body{
+                max-width: calc(100% - 30px);
+            }
+        }
+    }
+    .v-application--is-rtl{
+        .e-timeline{
+            &.phone{
+                &.v-timeline--dense:not(.v-timeline--reverse):before{
+                    right: calc(15px - 1px)!important;
+                }
+                &.v-timeline--dense .v-timeline-item__body{
+                    margin-right: 1rem;
+                }
+            }
+        }
+    }
+    .v-application--is-ltr{
+        .e-timeline{
+            &.phone{
+                &.v-timeline--dense:not(.v-timeline--reverse):before{
+                    left: calc(15px - 1px)!important;
+                }
+                &.v-timeline--dense .v-timeline-item__body{
+                    margin-left: 1rem;
+                }
             }
         }
     }

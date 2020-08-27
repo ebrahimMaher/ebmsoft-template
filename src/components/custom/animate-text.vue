@@ -26,6 +26,7 @@ export default {
             visibleIndex: -1,
             started: false,
             stopped: false,
+            animationId: null,
         }
     },
     methods: {
@@ -39,18 +40,23 @@ export default {
                 timeout = parseInt( this.duration ) / length;
                 
             this.started = true;
+            let animationId = Math.floor( Math.random()*10**6 ); // 6-digits random id for animation
+            this.animationId = animationId;
             
             for (let index=0; index < length; index++){
                     let currentTimeout = Math.round( (index+1) * timeout );
                     
                 window.setTimeout(()=>{
-                    this.visibleIndex = index;
-
-                    if (index === length-1){
-                        this.$emit('done');
-                        window.setTimeout(()=>{
-                            this.stopped = true;
-                        }, this.stopAfter);
+                    if (this.animationId === animationId){
+                        // if this animation is current animation (fix bug of two animations at same time)
+                        this.visibleIndex = index;
+    
+                        if (index === length-1){
+                            this.$emit('done');
+                            window.setTimeout(()=>{
+                                this.stopped = true;
+                            }, this.stopAfter);
+                        }
                     }
                 }, currentTimeout)
             }
@@ -81,11 +87,14 @@ export default {
         &.visible{
             opacity: 1;
         }
-        &.active{
-            &:after{
-                content: "|";
-                font-weight: 700;
-                animation: fade 0.8s linear infinite;
+        position: relative;
+        @media(min-width: 960px){
+            &.active{
+                &:after{
+                    content: "|";
+                    font-weight: 700;
+                    animation: fade 0.8s linear infinite;
+                }
             }
         }
         @keyframes fade {

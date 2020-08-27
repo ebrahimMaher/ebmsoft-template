@@ -1,7 +1,7 @@
 <template>
-    <e-section :headline="headline" :headline-icon="headlineIcon" :style="style" light>
+    <e-section :headline="headline" :subtitle="subtitle" :headline-icon="headlineIcon" :style="style" light :background="background" :divider="!!divider">
         <v-row>
-            <v-col class="section-col" v-for="(column, i) in cols" :key="i" :cols="colsWidth" >
+            <v-col class="section-col" data-aos="fade-up" :data-aos-duration="600 + 100 * (i+1) " :data-aos-delay="200*i" v-for="(column, i) in cols" :key="i" :cols="colsWidth" >
                 <div v-if="column.icon" class="col-icon mb-6" :class="`${column.color} lighten-5`">
                     <v-icon :color="column.color + ' darken-1'" x-large >{{column.icon}}</v-icon>
                 </div>
@@ -30,7 +30,7 @@ import ESection from './e-section'
 
 
 export default {
-    props: ['headline', 'headlineIcon', 'cols', 'background'],
+    props: ['headline', 'subtitle', 'headlineIcon', 'cols', 'background', 'divider'],
     data(){
         return {
 

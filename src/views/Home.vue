@@ -4,14 +4,68 @@
 
         "sections": {
             "1": {
-                "title": "حلول تقنية للأعمال التجارية اﻹلكترونية",
-                "subtitle": "نعمل على برمجة وتطوير خدمات ومنصات توفر حلولاً للأعمال التجارية اﻹلكترونية في الشرق اﻷوسط والوطن العربي"
+                "title": "شركة تطوير برمجيات وحلول تقنية مخصصة",
+                "subtitle": "نعمل على برمجة وتطوير خدمات ومنصات توفر حلولاً للأعمال التجارية اﻹلكترونية في الشرق اﻷوسط والوطن العربي."
+            },
+            "about": {
+                "title": "معلومات عن الشركة",
+                "subtitle": "معلومات وتفاصيل عن الشركة وآلية عملها وأهدافها",
+                "row1": {
+                    "title": "من نحن؟ وماذا نفعل؟ وما هي أهدافنا ؟",
+                    "content": "EBMSoft هي شركة تطوير برمجيات وحلول تقنية تطوّر وتمتلك عدة أنظمة ومشاريع متقدمة تهدف إلى دعم وتطوير اﻷعمال التجارية اﻹلكترونية وتسهيل آلية عملها وإحداث طفرة في أسلوب استخدام اﻷعمال التجارية للتكنولوجيا الحديثة كما تقدم الشركة خدمات ومنصات تساعد وتحل مشاكل العاملين بأي صناعة من صناعات اﻷعمال اﻹلكترونية في الشرق اﻷوسط والوطن العربي."
+                },
+                "row2": {
+                    "title": "نطور برمجيات وأنظمة مخصصة ومتطورة!",
+                    "content": "يستخدم فريق عمل شركة EBMSoft أحدث تقنيات البرمجة والتصميم لتطوير المواقع واﻷنظمة وتطبيقات Android  و IOS وكذلك برامج الحاسوب مما يمكننا من تنفيذ اﻷفكار واﻹبتكارات بشكل مخصص وإطلاق منصات حديثة، سريعة، وقوية تشمل مميزات غير مسبوقة باﻷنظمة اﻷخرى في الشرق اﻷوسط والوطن العربي!"
+                }
+            },
+            "contact": {
+                "subtitle": "اترك لنا رسالة وسوف نقوم بالرد عليك بأسرع وقت ممكن"
+            },
+            "timeline": {
+                "title": "الخط الزمني للشركة",
+                "subtitle": "شريط زمني يضم الأحداث والتواريخ الهامة في تاريخ شركة EBMSoft"
+            },
+            "products": {
+                "title": "مشاريعنا",
+                "subtitle": "المنصات والخدمات اﻹلكترونية التابعة لشركتنا والتي نعمل على تطويرها وإدراتها"
+            },
+            "industries": {
+                "title": "مجالات عملنا",
+                "subtitle": "المجالات والصناعات التي نعمل حالياً على تطوير برمجيات متقدمة لدعمها وحل مشكلاتها",
+                "cols": [
+                    {
+                        "headline": "التجارة اﻹلكترونية",
+                        "description": "نعمل على تطوير وإدارة منصات تقدم حلولاً لمجال التجارة اﻹلكترونية والعاملين فيه مما يعطي قوة أكبر للبائع في الوصول للمشتري وكذلك للمشتري في الوصول لمنتج أفضل."
+                    },
+                    {
+                        "headline": "التكنولوجيا المالية",
+                        "description": "نعمل على تطوير منصات وبرمجيات وحلول لمجال التكنولوجيا المالية والتحويلات المالية الذي يواجه الكثير من المشاكل في الشرق اﻷوسط وتحديداً الوطن العربي."
+                    },
+                    {
+                        "headline": "إدارة المشاريع",
+                        "description": "نعمل على برمجة وتطوير برمجيات متطورة تساعد الشركات والمشاريع التجارية على اﻹدارة والمحاسبة بإستخدام التكنولوجيا الحديثة."
+                    }
+                ]
             },
             "actions": {
                 "contact": "تواصل معنا",
+                "about": "معرفة المزيد عنّا",
                 "products": "مشاريعنا"
             }
         },
+        "timeline": [
+            {
+                "title": "تأسيس شركة EBMSoft لتطوير البرمجيات",
+                "content": "تأسيس شركة EBMSoft لتطوير البرمجيات والحلول التقنية واﻷنظمة التي تهدف إلى دعم وتطوير اﻷعمال التجارية اﻹلكترونية."
+            },
+            {
+                "date": "قريباً",
+                "title": "إطلاق أول نظام ومنصة تابعة للشركة",
+                "content": "إطلاق أول نظام ومنصة تابعة لشركة EBMSoft في مجال التجارة اﻹلكترونية بهدف تقديم حلول أفضل وأكثر تطوراً وسهولةً وحل المشكلات الموجودة بالسوق حالياً."
+            }
+        ],
+        
         "contact": {
             "subheader": "أو تواصل معنا عبر الوسائل اﻵتية:",
             "email": "البريد اﻹلكتروني",
@@ -22,14 +76,67 @@
     "en": {
         "sections": {
             "1": {
-                "title": "E-Business Software Solutions",
-                "subtitle": "We are providing software solutions, products and platforms to e-commerce, and other e-business industries in the middle east."
+                "title": "Software Development Company",
+                "subtitle": "We provide advanced software solutions, services and platforms that empowers e-business industry workers in the Middle East."
+            },
+            "about": {
+                "title": "About Us",
+                "subtitle": "Who we are and What are our goals.",
+                "row1": {
+                    "title": "who we are, What we do, and What are our goals?",
+                    "content": "EBMSoft is a software and technology development company that develops and owns several advanced systems and projects aimed at supporting and developing e-business, developing its mechanism of work and making a breakthrough in the way businesses use modern technology. The company also provides services and platforms that help and solve the problems of workers of any e-business industry in the Middle East. And the Arab world."
+                },
+                "row2": {
+                    "title": "We develop custom softwares and technology!",
+                    "content": "EBMSoft's team uses the latest programming and design techniques to develop websites, systems, Android and IOS applications, as well as computer programs, which enables us to implement ideas and innovations in a custom fashion and launch modern, fast, and powerful platforms that include features unprecedented in other systems in the Middle East and the Arab world!"
+                }
+            },
+            "contact": {
+                "subtitle": "Leave us a message and we'll reply as soon as possible"
+            },
+            "timeline": {
+                "title": "Timeline of our history",
+                "subtitle": "the most important dates and events in EBMSoft's history"
+            },
+            "products": {
+                "title": "Our Products & Projects",
+                "subtitle": "Platforms, Services and Solutions that are developed and managed by EBMSoft"
+            },
+            "industries": {
+                "title": "Industries We Develop",
+                "subtitle": "Industries that we are currently working on developing it and providing software solutions to solve their problems.",
+                "cols": [
+                    {
+                        "headline": "E-Commerce",
+                        "description": "We are working to develop and operate projects and platforms that provide solutions for the e-commerce and its workers those working, which helps the seller in reaching the buyer as well as the buyer in reaching a better product."
+                    },
+                    {
+                        "headline": "Financial Tech",
+                        "description": "We are working on developing platforms, software and solutions for Financial Technology and Money Transfer that faces many problems in the Middle East, specifically the Arab world."
+                    },
+                    {
+                        "headline": "Business Managment",
+                        "description": "We are working on programming and developing advanced software solutions that helps companies and Businesses in Management and Accounting by using modern technology"
+                    }
+                ]
             },
             "actions": {
                 "contact": "Contact Us",
+                "about": "More About Us",
                 "products": "Our Products"
             }
         },
+        "timeline": [
+            {
+                "title": "Founding EBMSoft for Software Development",
+                "content": "EBMSoft was founded to develop and provide advanced software solutions that empowers e-business industry workers and take people to the digital area in the Middle East."
+            },
+            {
+                "date": "Soon",
+                "title": "Launching the first system / platform",
+                "content": "Launching the first system and platform developed by EBMSoft for e-commerce industry workers to provide better and modern solutions and solve the problems of this industry in the Middle East."
+            }
+        ],
         "contact": {
             "subheader": "or contact us via:",
             "email": "Email Address",
@@ -52,13 +159,14 @@
                 </v-slide-y-transition>
                 <v-slide-x-transition appear>
                 <h2 class="text--text mt-5">
-                    <animate-text @done="showSection1Actions = true" :duration="3000" :delay="2000" :text="$t('sections.1.subtitle')"></animate-text>
+                    <animate-text @done="showSection1Actions = true" :duration="2500" :delay="2000" :text="$t('sections.1.subtitle')"></animate-text>
                     <!-- <div>Information Technology & Electronic Business Company</div> -->
                 </h2>
                 </v-slide-x-transition>
                 <div class="actions" :class="{'fade-up-off': !showSection1Actions, 'fade-up-on': showSection1Actions}">
-                    <v-btn color="strong-text" tile large depressed outlined class="me-6">{{$t('sections.actions.products')}}</v-btn>
-                    <v-btn color="secondary" tile large outlined>{{$t('sections.actions.contact')}}</v-btn>
+                    <!-- <v-btn @click="navigateToLink('#productsSection')" color="strong-text" tile :large="pcOnly" depressed outlined class="me-6">{{$t('sections.actions.products')}}</v-btn> -->
+                    <v-btn @click="navigateToLink('#aboutSection')" color="strong-text" tile :large="pcOnly" depressed outlined class="me-6">{{$t('sections.actions.about')}}</v-btn>
+                    <v-btn @click="navigateToLink('#contactSection')" color="secondary" tile :large="pcOnly" outlined>{{$t('sections.actions.contact')}}</v-btn>
                 </div>
             </v-container>
 
@@ -66,49 +174,92 @@
                 <scroll-icon @click="scrollToSection(2)"/>
             </div>
         </section>
-        <cols-section headline="مجالات عملنا" :cols="section2Columns" >
+        <e-section id="aboutSection" data-section="about" :headline="$t('sections.about.title')" :subtitle="$t('sections.about.subtitle')" :cols="section2Columns" light divider>
+            <v-row>
+                <v-col :data-aos="pcOnly ? (isRtl ? 'fade-left' : 'fade-right') : 'fade-up'" data-aos-duration="800" :cols="pcOnly ? 5 : 12" class="">
+                    <v-img src="/img/vector1.png" contain width="100%" max-height="320"></v-img>
+                </v-col>
+                <v-spacer></v-spacer>
+                <v-col :data-aos="pcOnly ? (isRtl ? 'fade-right' : 'fade-left') : 'fade-up'" data-aos-duration="800" class="mt-6 mt-lg-0" :cols="pcOnly ? 6 : 12">
+                    <h1 class="headline">{{$t('sections.about.row1.title')}}</h1>
+                    <p class="medium-text text-light--text mt-6 mt-lg-8" :class="{'text-center': phoneOnly}">
+                        {{$t('sections.about.row1.content')}}
+                    </p>
+                    <div class="actions">
+                        <v-btn @click="navigateToLink('#industriesSection')" tile large depressed color="primary">{{$t('sections.industries.title')}}</v-btn>
+                        <v-btn @click="navigateToLink('#timelineSection')" tile large depressed color="primary" outlined class="ms-4">{{$t('sections.timeline.title')}}</v-btn>
+                    </div>
+                </v-col>
+            </v-row>
+            <v-row style="margin-top: 3.5rem" class=" flex-row-reverse">
+
+                <v-col :data-aos="pcOnly ? (isRtl ? 'fade-right' : 'fade-left') : 'fade-up'" data-aos-duration="800" :cols="pcOnly ? 5 : 12" class="">
+                    <v-img src="/img/vector2.png" contain width="100%" max-height="320"></v-img>
+                </v-col>
+                <v-spacer></v-spacer>
+                <v-col :data-aos="pcOnly ? (isRtl ? 'fade-left' : 'fade-right') : 'fade-up'" data-aos-duration="800" class="mt-6 mt-lg-0" :cols="pcOnly ? 6 : 12">
+                    <h1 class="headline">{{$t('sections.about.row2.title')}}</h1>
+                    <p class="medium-text text-light--text mt-6 mt-lg-8" :class="{'text-center': phoneOnly}">
+                        {{$t('sections.about.row2.content')}}
+                    </p>
+
+                    <div class="actions">
+                        <v-btn @click="navigateToLink('#productsSection')" tile large depressed color="primary">{{$t('sections.products.title')}}</v-btn>
+                        <!-- <v-btn @click="navigateToLink('#timelineSection')" tile large depressed color="primary" outlined class="ms-4">{{$t('sections.timeline.title')}}</v-btn> -->
+                    </div>
+                </v-col>
+            </v-row>
+        </e-section>
+
+        <cols-section id="industriesSection" :headline="$t('sections.industries.title')" :subtitle="$t('sections.industries.subtitle')" :cols="industriesCols">
 
         </cols-section>
 
-        <e-section id="productsSection" data-section="products" background="light" headline="مشاريعنا" subtitle="المنصات والخدمات اﻹلكترونية التابعة لشركتنا والتي نعمل على تطويرها وإدراتها" light>
+
+        <e-section id="productsSection" data-section="products" background="light" :headline="$t('sections.products.title')" :subtitle="$t('sections.products.subtitle')" light>
             <v-row class="flex-wrap justify-center">
-                <v-col v-for="(project, i) in projects" :key="i" cols="4">
-                    <v-card v-ripple="false" class="card-shadow fill-height pa-3" :href="project.href ? project.href : ''" :target="project.href ? '_blank' : ''">
-                        <v-img :src="project.image" cover height="300" />
-                        <v-card-title class="mb-1">{{project.title}}</v-card-title>
-                        <v-card-subtitle>{{project.subtitle}}</v-card-subtitle>
+                <v-col v-for="(project, i) in projects" :key="i" :cols="pcOnly ? 4 : 12">
+                    <v-card v-ripple="project.href ? {class: 'soft-ripple'} : false" data-aos="fade-up" :data-aos-duration="800" :data-aos-delay="400*i" class="card-shadow fill-height" :href="project.href ? project.href : ''" :target="project.href ? '_blank' : ''">
+                        <v-img :src="project.image" cover height="250" />
+                        <div class="py-1 px-3">
+                            <v-card-title class="primary--text mb-1">{{project.title}}</v-card-title>
+                            <v-card-subtitle>{{project.subtitle}}</v-card-subtitle>
+                        </div>
                     </v-card>
                 </v-col>
             </v-row>
         </e-section>
 
-        <e-section id="timelineSection" data-section="timeline" divider headline="الشريط الزمني لتاريخ الشركة" subtitle="شريط زمني يضم الأحداث والتواريخ الهامة في تاريخ شركة EBMSoft" light>
-            <timeline :data="timeline" />
+        <e-section id="timelineSection" data-section="timeline" divider :headline="$t('sections.timeline.title')" :subtitle="$t('sections.timeline.subtitle')" light>
+            <timeline data-aos="fade-up" :data-aos-duration="800" :data="timeline" />
         </e-section>
 
-        <e-section id="contactSection" data-section="contact" headline="تواصل معنا" subtitle="اترك لنا رسالة وسوف نقوم بالرد عليك بأسرع وقت ممكن" light>
+        <e-section id="contactSection" data-section="contact" :headline="$t('links.contact')" :subtitle="$t('sections.contact.subtitle')" light>
             <v-row class="justify-center px-lg-12">
-                <v-col cols="6" class="ps-lg-12">
-                    <contact-form />
+                <v-col :cols="pcOnly ? 6 : 12" class="ps-lg-12">
+                    <contact-form data-once :data-aos="'fade'" :data-aos-duration="800" />
                 </v-col>
-                <v-col cols="1" class="text-center">
+                <v-col v-if="pcOnly" cols="1" class="text-center">
                     <v-divider vertical></v-divider>
                 </v-col>
-                <v-col cols="3">
-                    <v-subheader>
-                        {{$t('contact.subheader')}}
-                    </v-subheader>
-                    <v-list two-line>
-                        <v-list-item v-for="item in contactItems" :key="item.name" :target="item.href ? '_blank' : ''" :href="item.href ? item.href : (item.name === 'email' ? `mailto:${item.value}` : '')">
-                            <v-list-item-icon>
-                                <v-icon :color="item.color">{{item.icon}}</v-icon>
-                            </v-list-item-icon>
-                            <v-list-item-content>
-                                <v-list-item-subtitle class="mb-2">{{$t('contact.' + item.name)}}</v-list-item-subtitle>
-                                <v-list-item-title>{{item.value}}</v-list-item-title>
-                            </v-list-item-content>
-                        </v-list-item>
-                    </v-list>
+                <v-col :cols="pcOnly ? 3 : 12">
+                    <div :data-aos="'fade'" :data-aos-duration="800">
+                        <v-subheader>
+                            {{$t('contact.subheader')}}
+                        </v-subheader>
+                        <v-list two-line>
+                            <v-list-item v-for="item in contactItems" :key="item.name" :target="item.href ? '_blank' : ''" :href="item.href ? item.href : (item.name === 'email' ? `mailto:${item.value}` : '')">
+                                <v-list-item-icon>
+                                    <v-icon :color="item.color">{{item.icon}}</v-icon>
+                                </v-list-item-icon>
+                                <v-list-item-content>
+                                    <v-list-item-subtitle class="mb-2">{{$t('contact.' + item.name)}}</v-list-item-subtitle>
+                                    <v-list-item-title>{{item.value}}</v-list-item-title>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list>
+
+                    </div>
                 </v-col>
             </v-row>
         </e-section>
@@ -129,7 +280,11 @@
 
 <script>
 // @ is an alias to /src
-import 'particles.js/particles';
+import 'particles.js';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+
+
 import ScrollToTop from '@/components/custom/scroll-to-top'
 import AnimateText from '@/components/custom/animate-text'
 import ScrollIcon from '@/components/custom/scroll-icon'
@@ -161,6 +316,7 @@ export default {
         return {
             showSection1Actions: false,
             currentScrollTop: 0,
+            
             contactItems: [
                 {name: 'email', icon: 'mdi-email', value: 'info@ebmsoft.net', color: 'primary'},
                 {name: 'facebook', icon: 'mdi-facebook', value: '@EBMSoft.net', color: 'blue darken-1', href: 'https://facebook.com/ebmsoft.net'},
@@ -168,27 +324,20 @@ export default {
             ],
             projects: [
                 {
-                    image: 'https://www.pricecheck.co.za/blog/wp-content/uploads/2017/07/WhatsApp_Logo_5.png',
-                    title: "Whatsapp Platform",
-                    subtitle: "Whatsapp is chating and social media platform",
-                    href: "https://web.whatsapp.com"
+                    image: '/img/coming-soon.png',
+                    title: "EBM Affiliates System",
+                    subtitle: "Advanced and Modern E-commerce platform that helps sellers connect with marketers and affiliates people that have the ability to reach buyers easily by their selling channels"
                 },
                 {
-                    image: 'https://www.pricecheck.co.za/blog/wp-content/uploads/2017/07/WhatsApp_Logo_5.png',
-                    title: "Whatsapp Platform",
-                    subtitle: "Whatsapp is chating and social media platform"
+                    image: '/img/coming-soon.png',
+                    title: "E-Commerce Platform",
+                    subtitle: "E-Commerce Project, we'll publish more info at the right time"
                 },
                 {
-                    image: 'https://www.pricecheck.co.za/blog/wp-content/uploads/2017/07/WhatsApp_Logo_5.png',
-                    title: "Whatsapp Platform",
-                    subtitle: "Whatsapp is chating and social media platform, Whatsapp is chating and social media platform, Whatsapp is chating and social media platform"
+                    image: '/img/coming-soon.png',
+                    title: "E-Commerce Project",
+                    subtitle: "E-commerce Project that will help merchants and small-to-medium stores to start selling online!"
                 },
-            ],
-            timeline: [
-                {date: 2019},
-                {date: 2019},
-                {date: 2019},
-                {date: 2019},
             ],
             teamMembers: [
                 {name: 'Ebrahim Maher', job: 'Founder, CEO & Developer', avatar: '/img/team/ebrahim-maher.jpg', description: 'Founder and CEO of EBMSoft company '}
@@ -217,7 +366,20 @@ export default {
         }
     },
     computed: {
-        
+        industriesCols(){
+            return [
+               {color: 'blue', icon: 'mdi-cart-outline', headline: this.$t('sections.industries.cols.0.headline'), description: this.$t('sections.industries.cols.0.description')},
+               {color: 'deep-orange', icon: 'mdi-currency-usd-circle-outline', headline: this.$t('sections.industries.cols.1.headline'), description: this.$t('sections.industries.cols.1.description')},
+               {color: 'teal', icon: 'mdi-store', headline: this.$t('sections.industries.cols.2.headline'), description: this.$t('sections.industries.cols.2.description')},
+            ];
+        },
+        timeline(){
+
+            return [
+                {date: '27-8-2020', title: this.$t('timeline.0.title'), content: this.$t('timeline.0.content')},
+                {date: this.$t('timeline.1.date'), title: this.$t('timeline.1.title'), content: this.$t('timeline.1.content')}
+            ];
+        },
         ...GlobalComputed
     },
     methods: {
@@ -229,8 +391,8 @@ export default {
             }
         },
         scrollObserver(){
-            document.body.addEventListener('scroll', ()=>{
-                this.currentScrollTop = document.body.scrollTop;
+            window.addEventListener('scroll', ()=>{
+                this.currentScrollTop = document.documentElement.scrollTop;
             })
         },
         handleScrollChange(scrollTop){
@@ -270,7 +432,7 @@ export default {
 
     mounted(){
         this.scrollObserver();
-        
+        AOS.init({container: document.documentElement, once: true, easing: 'ease'});
     }
 };
 </script>
@@ -294,17 +456,38 @@ export default {
         h1{
             font-size: 4rem;
             font-weight: 300;
+
+            @media(max-width: 960px){
+                text-align: center;
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                font-weight: 400;
+            }
         }
         h2{
             font-size: 2.75rem;
             word-break: break-word!important;
             font-weight: 200;
+
+            @media(max-width: 960px){
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
         }
         .actions{
-            margin-top: 4rem;
+            margin-top: 3rem;
+            @media(max-width: 960px){
+                margin: 2rem 0;
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
             .v-btn{
-                min-width: 130px;
-                min-height: 45px;
+                @media(min-width: 960px){
+                    min-width: 130px;
+                    min-height: 45px;
+                }
             }
         }
         .section-scroll-icon{

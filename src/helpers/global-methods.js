@@ -2,7 +2,7 @@ export default {
     
     scrollToElement(el, duration=700){
         let scrollTop = el.offsetTop - this.navbarHeight;
-        this.$vuetify.goTo(scrollTop, {duration: duration, container: document.body});
+        this.$vuetify.goTo(scrollTop, {duration: duration, container: document.documentElement, easing: 'easeInOutQuad'});
     },
     navigateToLink(ref){
         if (this.$route.name === 'home'){
@@ -16,6 +16,6 @@ export default {
     },
 
     scrollToTop(){
-        this.$vuetify.goTo(0, {duration: 1000, container: document.body, easing: 'easeInQuint'});
+        this.$vuetify.goTo(0, {duration: 1000, container: document.documentElement, easing: 'easeOutQuint'});
     },
 }

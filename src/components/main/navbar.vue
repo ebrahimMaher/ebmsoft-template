@@ -9,21 +9,21 @@
 }
 </i18n>
 <template>
-    <v-app-bar :light="light" :height="scrolled ? this.navbarHeight : 130" class="navbar" :class="{'blank': !scrolled || !light, 'soft-shadow': light}" :flat="!light" fixed :color="light ? 'white' : 'dark'" :dark="!light">
+    <v-app-bar :light="light" :height="scrolled ? this.navbarHeight : (pcOnly ? 130 : 100)" class="navbar" :class="{'blank': !scrolled & !light, 'soft-shadow': light, 'dark-gradient': scrolled && !light}" :flat="!light" fixed :color="light ? 'white' : 'dark'" :dark="!light">
         <v-container class="d-flex align-center">
             <div>
                 <!-- logo -->
-                <logo :light="light" width="140" />
+                <logo :light="light" :width="pcOnly ? 140 : 125" />
             </div>
             <v-spacer />
             <v-slide-x-reverse-transition appear>
                 <div class="d-flex">
-                    <div class="d-flex align-center">
+                    <div v-if="pcOnly" class="d-flex align-center">
                         <v-btn :color="activeSection === link.name ? 'secondary' : undefined" :outlined="activeSection === link.name" v-for="link in links" :key="link.name" large tile :text="activeSection !== link.name" class="ms-2" @click="navigateToLink(link.ref)">{{$t(`links.${link.name}`)}}</v-btn>
                     </div>
 
                     <div class="d-flex align-center ms-8">
-                        <locale-button />
+                        <locale-button :large="pcOnly" />
                     </div>
 
                 </div>
@@ -68,15 +68,15 @@ export default {
         ...GlobalComputed
     },
     methods: {
-        handleScroll(e){
-            this.scrolled = e.target.scrollTop > 0;
+        handleScroll(){
+            this.scrolled = window.scrollY > 0;
         },
 
         ...GlobalMethods
     },
     mounted(){
-        document.body.addEventListener('scroll', this.handleScroll);
-        this.handleScroll({target: document.body});
+        window.addEventListener('scroll', this.handleScroll);
+        this.handleScroll();
     }
 }
 </script>
@@ -84,13 +84,13 @@ export default {
 <style lang="scss">
     .v-application .navbar{
         &, .v-toolbar__content{
-            transition: height 0.2s ease-out, background 0s ease-out!important;
+            transition: height 0.2s ease-out, background-color 0.1s linear!important;
         }
         &.soft-shadow{
-            box-shadow: 0 1px 5px rgba(0,0,0, .1)!important;
+            box-shadow: 0 0 transparent, 0 0 transparent, 0 5px 5px -4px rgba(0, 0, 0, 0.10)!important;
         }
         &.dark-gradient{
-            box-shadow: 0 1px 8px 0px rgba(0,0,0, .5)!important;
+            box-shadow: 0 1px 8px 0px rgba(0,0,0, .2)!important;
         }
         &.blank{
             &, .v-toolbar__content{

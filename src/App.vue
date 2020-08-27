@@ -42,6 +42,7 @@ export default {
 </script>
 
 <style lang="scss">
+
     .fade-out-enter, .fade-out-leave{
         opacity: 1;
     }
@@ -78,26 +79,40 @@ export default {
     .v-application, body, html, .v-main{
         font-size: 16px!important;
     }
+    .medium-text{
+        font-size: 18px;
+        line-height: 2.2rem!important;
+        @media(max-width: 960px){
+            font-size: 17px;
+            line-height: 2rem!important;
+        }
+    }
     .details-text{
         font-size: 14px!important;
     }
     .v-application{
         h1.headline{
             font-size: 2.2rem!important;
-            line-height: 3rem!important;
+            line-height: 3.3rem!important;
         }
     }
-    #app, #fullpage, .page, .fullpage-section, .v-application, body, html{
+    #fullpage, .fullpage-section{
         height: 100vh;
+        position: relative;
+    }
+    .soft-ripple{
+        color: rgba(0,0,0, .2)!important;
     }
     .v-card{
         &.card-shadow{
-            box-shadow: 0 1px 5px 0 rgba(0,0,0, .1)!important;
+            box-shadow: 0 1px 4px 0 rgba(0,0,0, .1)!important;
             transition: 0.15s ease-in-out all;
             
-            &:hover{
-                box-shadow: 0 4px 10px 1px rgba(0,0,0, .1)!important;
-                transform: translateY(-5px);
+            @media(min-width: 960px){
+                &:hover{
+                    box-shadow: 0 3px 15px 0 rgba(0,0,0, .08)!important;
+                    transform: translateY(-6px);
+                }
             }
             &.v-card--link{
                 &:before{
@@ -105,7 +120,7 @@ export default {
                 }
                 &:active{
                     transform: translateY(1px);
-                    box-shadow: 0 2px 3px 1px rgba(0,0,0, .1)!important;
+                    box-shadow: 0 1px 3px 0 rgba(0,0,0, .1)!important;
                 }
             }
         }
@@ -118,6 +133,9 @@ export default {
 
             @media(min-width: 1904px){
                 max-width: 1290px;
+            }
+            @media(max-width: 960px){
+                padding: 16px;
             }
         }
     }

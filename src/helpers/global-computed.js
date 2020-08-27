@@ -12,7 +12,7 @@ export default {
         return !this.pcOnly;
     },
     navbarHeight(){
-        return 90;
+        return this.pcOnly ? 90 : 70;
     },
     lightNavbar(){
         return this.$store.state.lightNavbar;

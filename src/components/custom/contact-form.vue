@@ -7,6 +7,7 @@
             "email": "البريد اﻹلكتروني",
             "title": "عنوان الرسالة",
             "content": "محتوى الرسالة",
+            "send": "إرسال الرسالة",
             "placeholders": {
                 "name": "أدخل اسمك (اسم المرسل)",
                 "email": "أدخل بريدك اﻹلكتروني",
@@ -22,6 +23,7 @@
             "name": "Name",
             "title": "Message Subject",
             "content": "Message Content",
+            "send": "Send Message",
             "placeholders": {
                 "name": "Enter Your Name",
                 "email": "Enter Your Email Address",
@@ -35,10 +37,10 @@
 <template>
 <form>
     <v-row>
-        <v-col cols="6">
+        <v-col :cols="pcOnly ? 6 : 12">
             <v-text-field hide-details outlined :label="$t('contact.name')" :placeholder="$t('contact.placeholders.name')" />
         </v-col>
-        <v-col cols="6">
+        <v-col :cols="pcOnly ? 6 : 12">
             <v-text-field hide-details outlined :label="$t('contact.email')" :placeholder="$t('contact.placeholders.email')" />
         </v-col>
     </v-row>
@@ -53,8 +55,8 @@
         </v-col>
     </v-row>
     <div class="contact-actions d-flex mt-4">
-        <v-btn block x-large tile color="primary">
-            <span>إرسال الرسالة</span>
+        <v-btn disabled block x-large tile color="primary">
+            <span>{{$t('contact.send')}}</span>
             <v-icon class="ms-3">mdi-arrow-{{isRtl ? 'left' : 'right'}}</v-icon>
         </v-btn>
     </div>

@@ -4,10 +4,10 @@ module.exports = {
 
     pwa: {
         name: 'EBMSoft',
-        themeColor: '#02173A',
-        msTileColor: '02173A',
+        themeColor: '#050A19',
+        msTileColor: '#050A19',
         appleMobileWebAppCapable: 'yes',
-        appleMobileWebAppStatusBarStyle: '#02173A',
+        appleMobileWebAppStatusBarStyle: '#050A19',
         iconPaths: {
             favicon128: 'img/icons/favicon-128x128.png',
             favicon86: 'img/icons/favicon-86x86.png',

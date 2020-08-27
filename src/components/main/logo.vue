@@ -32,7 +32,7 @@ export default {
     methods: {
         navigate(){
             if (this.$route.name === 'home'){
-                if (document.body.scrollTop > 50){
+                if (document.documentElement.scrollTop > 50){
                     this.scrollToTop();
                 }
             }else{
@@ -49,7 +49,8 @@ export default {
         cursor: pointer;
         transition: all 0.2s ease-in;
         &:active{
-            transform: scale(0.95);
+            // transform: scale(0.95);
+            opacity: 0.7;
         }
     }
 </style>

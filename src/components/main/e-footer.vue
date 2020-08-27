@@ -17,28 +17,29 @@
         "copyrights": "EBMSoft - All rights reserved.",
         "description": "Software Development and Information Technology Company that provides software solutions, products and platforms to e-commerce, and other e-business industries in the middle east.",
         "created-by": "this website was designed, coded and developed by EBMSoft Team.",
-        "links": "Navigation in the website :",
+        "links": "Navigation:",
         
         "contact": {
             "subheader": "contact us via:",
             "email": "Email Address",
             "facebook": "Facebook Page",
-            "website": "Navigation :"
+            "website": "Website"
         }
     }
 }
 </i18n>
 <template>
-    <footer class="e-footer footer-bg strong-text--text">
-        <v-container class="text--text py-10">
+    <footer class="e-footer footer-bg strong-text--text" :class="{'phone': phoneOnly}">
+        <v-container data-aos="fade-up" data-aos-duration="600" class="row-container text--text py-10">
             <v-row>
-                <v-col cols="4" class="pe-lg-12">
-                    <logo width="160" />
+                <v-col :cols="pcOnly ? 4 : 12" class="pe-lg-12" :class="{'d-flex text-center justify-center align-center flex-column': phoneOnly}">
+                    <logo width="160"/>
                     <div class="footer-content mt-6 mt-lg-10">
                         {{$t('description')}}
                     </div>
                 </v-col>
-                <v-col cols="4" class="px-lg-12">
+                <template v-if="pcOnly">
+                <v-col :cols="pcOnly ? 4 : 12" class="px-lg-12">
                     <v-subheader class="text--text"> {{$t('links')}} </v-subheader>
                     <v-list color="footer-bg" dark>
                         <v-list-item v-for="link in links" :key="link.name" large tile text class="ms-2" @click="navigateToLink(link.ref)">
@@ -46,7 +47,7 @@
                         </v-list-item>
                     </v-list>
                 </v-col>
-                <v-col cols="4" class="ps-lg-12">
+                <v-col :cols="pcOnly ? 4 : 12" class="ps-lg-12">
                     <v-subheader class="text--text"> {{$t('contact.subheader')}} </v-subheader>
                     <v-list color="footer-bg" dark class="text--text" two-line>
                         <v-list-item v-for="item in contactItems" :key="item.name" :target="item.href ? '_blank' : ''" :href="item.href ? item.href : (item.name === 'email' ? `mailto:${item.value}` : '')">
@@ -60,12 +61,16 @@
                         </v-list-item>
                     </v-list>
                 </v-col>
+
+                </template>
             </v-row>
         </v-container>
         <v-spacer />
-        <div class="footer-watermark flex-column dark">
-            <div class="details-text text--text mb-3">{{$t('created-by')}}</div>
-            <div>© 2020 {{$t('copyrights')}}</div>
+        <div class="footer-watermark flex-column">
+            <v-container class="text-center py-0">
+                <div v-if="pcOnly" class="details-text text--text mb-3">{{$t('created-by')}}</div>
+                <div>© 2020 {{$t('copyrights')}}</div>
+            </v-container>
         </div>
     </footer>
 </template>
@@ -114,15 +119,22 @@ export default {
         align-content: stretch;
         flex-direction: column;
 
+        &.phone{
+            min-height: 400px;
+        }
 
         .footer-watermark{
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: rgba(0,0,0, .3);
+            line-height: 1.6rem;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             padding: 2rem 0;
         }
-        .container{
+        .row-container{
             line-height: 1.9rem;
         }
     }

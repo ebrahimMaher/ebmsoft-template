@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section :data-section="dataSection" class="e-section" :class="{'py-6': phoneOnly, 'dark-gradient': !light, [background]: background}" :data-theme="light ? 'light' : 'dark'">
+        <section :data-section="dataSection" class="e-section" :class="{'phone': phoneOnly, 'dark-gradient': !light, [background]: background}" :data-theme="light ? 'light' : 'dark'">
             <v-container>
                 <div class="d-flex justify-center">
                     <div v-if="headline" class="section-title">
@@ -66,7 +66,7 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 3.25rem 0;
+        padding: 3.25rem 0!important;
 
         .section-title{
             text-align: center;
@@ -81,6 +81,23 @@ export default {
                 width: 75px;
                 margin: 2rem auto 5rem auto;
                 height: 1px;
+                @media(max-width: 960px){
+                    margin: 2rem auto 3rem auto;
+                }
+            }
+        }
+
+
+
+        &.phone{
+            min-height: 350px;
+            padding: 1.5rem 0!important;
+            
+            .headline{
+                font-size: 1.9rem!important;
+            }
+            .subtitle{
+                font-size: 15px!important;
             }
         }
     }
