@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span v-for="(l, i) in text" class="letter" :key="i" :class="{'visible': visibleIndex >= i, 'active': visibleIndex === i && !stopped}">{{l}}</span>
+        <div v-text="visibleText" class="animated-text" :class="{'active': started && !stopped}"></div>
     </div>
 </template>
 
@@ -27,6 +27,11 @@ export default {
             started: false,
             stopped: false,
             animationId: null,
+        }
+    },
+    computed:{
+        visibleText(){
+            return this.text.slice(0, this.visibleIndex+1);
         }
     },
     methods: {
@@ -82,19 +87,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .letter{
-        opacity: 0;
-        &.visible{
-            opacity: 1;
-        }
+    .animated-text{
         position: relative;
-        @media(min-width: 960px){
-            &.active{
-                &:after{
-                    content: "|";
-                    font-weight: 700;
-                    animation: fade 0.8s linear infinite;
-                }
+        width: 100%;
+        &.active{
+            &:after{
+                content: "|";
+                font-weight: 700;
+                animation: fade 0.8s linear infinite;
             }
         }
         @keyframes fade {

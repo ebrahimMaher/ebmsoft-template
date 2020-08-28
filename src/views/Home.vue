@@ -150,7 +150,7 @@
     <div class="page page-sections">
         <section id="headerSection" data-section="home" class="header-section dark-gradient fullpage-section">
             <animated-background />
-            <v-container v-if="!loading" class="fill-height pt-12">
+            <v-container v-if="!loading" class="fill-height pt-12" :class="{'align-center': phoneOnly}">
                 <v-slide-y-transition appear >
                 <h1 class="strong-text--text">
                     <animate-text :duration="1500" :stop-after="0" :delay="500" :text="$t('sections.1.title')" />
