@@ -1,4 +1,11 @@
-# ebmsoft
+# EBMSoft Profile Template
+> Open source Tech-Company custom profile template
+
+## Demo
+see demo here: [EBMSoft.net](https://www.ebmsoft.net)
+
+## Footer Attribute
+if you're gonna use this template in a commerical website or any production-project, please add attribute to footer: `Template by: EBMSoft.net`
 
 ## Clone the repo
 ```
