@@ -5,7 +5,7 @@
 see demo here: [EBMSoft.net](https://www.ebmsoft.net)
 
 ## Footer Attribute
-if you're gonna use this template in a commerical website or any production-project, please add attribute to footer: `Template by: EBMSoft.net`
+if you're going to use this template in a commerical website or any production-project, please add attribute to footer: `Template by: EBMSoft.net`
 
 ## Clone the repo
 ```
