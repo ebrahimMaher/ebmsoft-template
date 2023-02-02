@@ -174,7 +174,7 @@
                 <scroll-icon @click="scrollToSection(2)"/>
             </div>
         </section>
-        <e-section id="aboutSection" data-section="about" :headline="$t('sections.about.title')" :subtitle="$t('sections.about.subtitle')" :cols="section2Columns" light divider>
+        <e-section id="aboutSection" data-section="about" :headline="$t('sections.about.title')" :subtitle="$t('sections.about.subtitle')" light divider>
             <v-row>
                 <v-col :data-aos="pcOnly ? (isRtl ? 'fade-left' : 'fade-right') : 'fade-up'" data-aos-duration="800" :cols="pcOnly ? 5 : 12" class="">
                     <v-img src="/img/vector1.png" contain width="100%" max-height="320"></v-img>
@@ -342,27 +342,6 @@ export default {
             teamMembers: [
                 {name: 'Ebrahim Maher', job: 'Founder, CEO & Developer', avatar: '/img/team/ebrahim-maher.jpg', description: 'Founder and CEO of EBMSoft company '}
             ],
-
-            section2Columns: [
-                {
-                    headline: 'العنوان اﻷول',
-                    description: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها',
-                    color: 'success',
-                    icon: 'mdi-cart'
-                },
-                {
-                    headline: 'العنوان الثاني',
-                    description: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها',
-                    color: 'blue',
-                    icon: 'mdi-cube-send'
-                },
-                {
-                    headline: 'العنوان الثالث',
-                    description: 'هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها',
-                    color: 'deep-orange',
-                    icon: 'mdi-cash-multiple'
-                }
-            ]
         }
     },
     computed: {
